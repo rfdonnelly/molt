@@ -19,6 +19,8 @@ main() {
 }
 
 # we don't run the "test phase" when doing deploys
-if [ -z $TRAVIS_TAG ]; then
+# FIXME: This variable exists for a branch build for some reason which prevents
+# the build from running.
+# if [ -z $TRAVIS_TAG ]; then
     main
-fi
+# fi
